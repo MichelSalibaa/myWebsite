@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Security on the web</title>
+        <meta name="description" content="common web risks and practical safe practices for users and developers.">
+    </head>
+
+    <body>
+        <header>
+            <h1>Security on the web</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="mobile-first.html">Mobile-first</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+                </nav>
+        </header>
+        <main>
+            <article>
+                <section>
+                    <h2>Common risks</h2>
+                    <p>Web users and developers face many common risks: phishing and social engineering, cross‑site scripting (XSS), cross‑site request forgery (CSRF), insecure direct object references, broken authentication, and supply‑chain attacks. On the network layer, man‑in‑the‑middle attacks and unencrypted connections expose users’ data. Server misconfiguration and weak credentials remain frequent root causes of breaches.</p>
+                    <figure>
+                        <img src="images/web-security.png" alt="Padlock icon representing security" width="160">
+                        <figcaption>Security icon -- emphasizes confidentiality and integrity.</figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <h2>Safe Practices for users</h2>
+                    <ul>
+                        <li>Prefer sites that use HTTPS (look for a padlock icon and valid certificate).</li>
+                        <li>Use unique, strong passwords and a password manager; enable multi‑factor authentication where available.</li>
+                        <li>Be cautious with email links and attachments; verify sender identity before taking sensitive actions.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Best Practices for Developers</h2>
+                    <ol>
+                        <li>Adopt secure-by-design principles: validate inputs, use prepared statements/parameterized queries to prevent injection, and enforce least privilege on services.</li>
+                        <li>Use HTTPS everywhere with HSTS, set Content Security Policy (CSP), and implement secure cookie attributes (HttpOnly, Secure, SameSite).</li>
+                        <li>Keep dependencies up to date and monitor for supply‑chain vulnerabilities; use reproducible builds and signed packages where possible.</li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Resources</h2>
+                    <p>See through the OWASP top ten vendor security guides for prioritized checklists and implementation examples. More thorough references are listed on the references page.</p>
+                </section>
+
+                <footer>
+                    <p>Last updated: 2025-09-08</p>
+                    <p>Sources and further reading listed on <a href="references.html">References</a></p>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
