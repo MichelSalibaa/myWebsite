@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,1); /* shadow */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header:hover {
+    background-color: #0059b3;
+}
+
+nav ul {
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+nav li {
+    display: inline-block; /* puts links next to each other */
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* remove underline */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #004080;
+    transform: scale(1.1); /* grow slightly */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+main{
+    background-color: white;
+    max-width: 800px;
+    margin: 20px auto; /* center the content */
+    padding: 20px;
+    border-radius: 10px; /* rounded corners */
+}
+
+h2, h3 {
+    color: #004080;
+}
+
+figure {
+    text-align: center; /* center the contents of the figure */
+    margin: 15px auto; /* add space above/below and center horizontally */
+}
+
+figure img {
+    display: block; /* make the image behave like a block element */
+    margin: 0 auto; /* center it horizontally */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* remove double borders */
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e6f0ff; /* light blue header row */
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+blockquote {
+    background-color: #eef5ff;
+    border-left: 4px solid #004080;
+    margin: 15px 0;
+    padding: 10px 15px;
+    font-style: italic;
+}
+
+blockquote:hover {
+    background-color: #ddeeff;
+}
+
+footer {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
