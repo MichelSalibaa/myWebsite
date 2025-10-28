@@ -477,3 +477,31 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* === Arabic page layout fix === */
+html[lang="ar"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ar"] nav ul {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] nav li {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+html[lang="ar"] figure {
+  text-align: center;
+}
+
+html[lang="ar"] h1, 
+html[lang="ar"] h2, 
+html[lang="ar"] h3, 
+html[lang="ar"] p, 
+html[lang="ar"] li {
+  text-align: right;
+}
+
