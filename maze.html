@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Maze Lab</title>
+        <meta name="description" content="Interactive maze generator with solver and size controls.">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="maze-header">
+            <nav class="back-nav">
+                <a class="back-link" href="welcome.html">&larr; Back to Welcome Hub</a>
+            </nav>
+            <h1>Maze Lab</h1>
+            <p>Generate a maze, explore it, and reveal the solution path.</p>
+        </header>
+        <main>
+            <article class="maze">
+                <section class="maze-controls">
+                    <div class="control-group">
+                        <label for="mazeSize">Grid size:</label>
+                        <select id="mazeSize">
+                            <option value="10">10 x 10</option>
+                            <option value="15">15 x 15</option>
+                            <option value="20" selected>20 x 20</option>
+                            <option value="25">25 x 25</option>
+                            <option value="30">30 x 30</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <button id="generateMaze" type="button">Generate Maze</button>
+                        <button id="solveMaze" type="button" disabled>Solve Maze</button>
+                    </div>
+                    <p class="maze-status" id="mazeStatus">Choose a grid size and click Generate to begin.</p>
+                </section>
+                <section class="maze-canvas">
+                    <canvas id="mazeCanvas" width="600" height="600" aria-label="Maze canvas"></canvas>
+                </section>
+                <section class="maze-notes">
+                    <h2>How it works</h2>
+                    <ul>
+                        <li>Use the arrow keys on your keyboard to move from start to finish.</li>
+                        <li>The maze starts in the upper-left corner and ends in the lower-right corner.</li>
+                        <li>Use Generate to build a new maze with the selected size.</li>
+                        <li>Solve highlights the shortest path from start to finish.</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>Last updated: 2025-10-06</p>
+        </footer>
+        <script src="maze.js"></script>
+    </body>
+</html>
