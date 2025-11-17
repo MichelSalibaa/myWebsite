@@ -5,29 +5,77 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Welcome Hub -- Project 1 & 2</title>
         <meta name="description" content="Landing hub linking to the HTML-only and CSS-styled versions, plus the Arabic article.">
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
-        <header>
+    <body class="welcome-page">
+        <header class="welcome-hero">
+            <p class="welcome-kicker">Michel Saliba — CIS 1200 Projects</p>
             <h1>Welcome Hub</h1>
-            <p>This hub links to both versions of the site and the new Arabic page.</p>
-            <nav>
-                <ul>
-                    <li><a href="no-css/index.html">Project 1 -- HTML-only version</a></li>
-                    <li><a href="css/index.html">Project 2 -- CSS-styled Version</a></li>
+            <p class="welcome-tagline">Jump into the HTML-only research briefs, the CSS-styled experience, or the new interactive labs for CV creation and browser events.</p>
+            <div class="welcome-cta">
+                <a class="welcome-btn" href="css/cv-entry.html">Build a CV Preview</a>
+                <a class="welcome-btn welcome-btn--outline" href="css/events.html">Explore Events Catalog</a>
+                <a class="welcome-btn welcome-btn--outline" href="maze.html">Play Maze Game</a>
+            </div>
+            <nav class="welcome-nav">
+                <ul class="welcome-nav__list">
+                    <li><a href="no-css/index.html">Project 1 — HTML-only</a></li>
+                    <li><a href="css/index.html">Project 2 — CSS version</a></li>
                     <li><a href="ar/arabic-article.html">المقال العربي — Arabic Article</a></li>
                     <li><a href="maze.html">Maze Game</a></li>
-                    <li><a href="css/references.html">References</a></li>
+                    <li><a href="css/references.html">References & AI disclosure</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <article>
+        <main class="welcome-main">
+            <article class="welcome-card">
                 <section>
                     <h2>About this site</h2>
-                    <p>Project 1 preserves a pure HTML-only implementation. Project 2 presents the same content with an external CSS presentation layer and adds an arabic article.</p>
+                    <p>This hub stitches together the HTML-only research collection (Project 1), the more polished CSS build (Project 2), an Arabic article, and the Project 4 labs. Everything shares a single set of references so you can compare layouts, accessibility notes, and media across versions.</p>
+                </section>
+                <section>
+                    <h3>Latest additions</h3>
+                    <ul class="welcome-updates">
+                        <li><strong>CV Data Entry:</strong> Fill out a semantic form and watch the CV render instantly.</li>
+                        <li><strong>Browser Events Catalog:</strong> Filter common DOM, input, and media events with tags plus W3Schools references.</li>
+                        <li><strong>Research refresh:</strong> History, security, mobile-first, and stats pages were updated to align with current class notes.</li>
+                    </ul>
                 </section>
             </article>
+            <section class="welcome-links" aria-label="Quick navigation cards">
+                <div class="welcome-link-grid">
+                    <a class="welcome-link-card" href="no-css/index.html">
+                        <h3>HTML-only Version</h3>
+                        <p>See the baseline semantic structure without CSS embellishments.</p>
+                        <span>Visit Project 1 →</span>
+                    </a>
+                    <a class="welcome-link-card" href="css/index.html">
+                        <h3>CSS-styled Version</h3>
+                        <p>Read the same research briefs with responsive layout and imagery.</p>
+                        <span>Visit Project 2 →</span>
+                    </a>
+                    <a class="welcome-link-card" href="css/cv-entry.html">
+                        <h3>CV Builder</h3>
+                        <p>Enter your information, validate inputs, and export to the CV layout.</p>
+                        <span>Go to CV Entry →</span>
+                    </a>
+                    <a class="welcome-link-card" href="css/events.html">
+                        <h3>Events Catalog</h3>
+                        <p>Browse common browser events by category, tags, and search terms.</p>
+                        <span>Browse events →</span>
+                    </a>
+                    <a class="welcome-link-card" href="maze.html">
+                        <h3>Maze Game</h3>
+                        <p>Practice DOM events in action with keyboard navigation challenges.</p>
+                        <span>Play the maze →</span>
+                    </a>
+                    <a class="welcome-link-card" href="ar/arabic-article.html">
+                        <h3>Arabic Article</h3>
+                        <p>Read the mobile-first summary in Arabic with mirrored layout.</p>
+                        <span>قراءة المقال →</span>
+                    </a>
+                </div>
+            </section>
         </main>
         <footer>
             <p>Last updated: 2025-10-06</p>

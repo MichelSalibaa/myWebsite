@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Browser Events Catalog</title>
+        <meta name="description" content="Searchable catalog of browser events with categories, supported tags and W3Schools references.">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Project 4 — Web Events Catalog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="history.html">Web History</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="mobile-first.html">Mobile-First</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="css-rules.html">CSS rules</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="cv-entry.html">CV Entry</a></li>
+                    <li><a href="events.html" aria-current="page">Events Catalog</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="../welcome.html">Welcome Hub</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article class="events">
+                <section>
+                    <h2>Browser Events Reference</h2>
+                    <p>The list summarizes common DOM, input and media events used in modern web apps. Use the filters to spotlight a category or search across descriptions.</p>
+                </section>
+                <section class="events-controls" aria-label="Filters">
+                    <div class="field-group">
+                        <label for="events-search">Search events</label>
+                        <input type="search" id="events-search" placeholder="Type to search by name or description">
+                    </div>
+                    <div class="field-group">
+                        <label for="events-category">Category</label>
+                        <select id="events-category">
+                            <option value="all">Show all</option>
+                            <option value="Window">Window</option>
+                            <option value="Mouse">Mouse</option>
+                            <option value="Keyboard">Keyboard</option>
+                            <option value="Form">Form</option>
+                            <option value="Clipboard">Clipboard</option>
+                            <option value="Drag &amp; Drop">Drag &amp; Drop</option>
+                            <option value="Touch">Touch</option>
+                            <option value="Pointer">Pointer</option>
+                            <option value="Media">Media</option>
+                            <option value="Animation/Transition">Animation/Transition</option>
+                            <option value="DOM">DOM</option>
+                            <option value="Focus">Focus</option>
+                        </select>
+                    </div>
+                    <p id="events-status" class="events-status" role="status" aria-live="polite"></p>
+                </section>
+                <section class="events-table-wrapper">
+                    <div class="table-scroll">
+                        <table class="events-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Tags</th>
+                                    <th scope="col">W3Schools</th>
+                                </tr>
+                            </thead>
+                            <tbody id="events-table-body">
+                                <tr>
+                                    <td colspan="5">Loading events…</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>Last updated: 2025-10-06</p>
+        </footer>
+        <script src="../js/events.js" defer></script>
+    </body>
+</html>

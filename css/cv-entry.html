@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CV Data Entry & Live Preview</title>
+        <meta name="description" content="Enter CV data through an accessible form and preview the rendered layout in real time.">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Project 4 — CV Entry & Preview</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="history.html">Web History</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="mobile-first.html">Mobile-First</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="css-rules.html">CSS rules</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="cv-entry.html" aria-current="page">CV Entry</a></li>
+                    <li><a href="events.html">Events Catalog</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="../welcome.html">Welcome Hub</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article class="cv-entry">
+                <section class="cv-entry__intro">
+                    <h2>Build and Preview Your CV</h2>
+                    <p>Enter personal information, education, experience and skills. The form validates required fields in the browser, and the JavaScript renders your data into the same CV layout used in the reference page.</p>
+                </section>
+                <section class="cv-entry__form">
+                    <h3>CV Data Form</h3>
+                    <form id="cv-form">
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                            <div class="form-grid">
+                                <label for="fullName">Full Name*</label>
+                                <input type="text" id="fullName" name="fullName" required>
+
+                                <label for="tagline">Headline / Tagline*</label>
+                                <input type="text" id="tagline" name="tagline" required>
+
+                                <label for="location">Location*</label>
+                                <input type="text" id="location" name="location" required>
+
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Optional">
+
+                                <label for="linkedin">LinkedIn URL</label>
+                                <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/username/">
+                            </div>
+                            <label for="summary">Professional Summary*</label>
+                            <textarea id="summary" name="summary" rows="4" required></textarea>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Experience</legend>
+                            <p class="helper-text">Each entry renders with a title, organization, timeframe and bullet list. Separate bullet lines with the Enter key.</p>
+                            <div class="repeatable" data-repeatable="experience">
+                                <div class="repeatable__item" data-entry>
+                                    <label>Role or Title*
+                                        <input type="text" class="experience-role" required>
+                                    </label>
+                                    <label>Organization*
+                                        <input type="text" class="experience-org" required>
+                                    </label>
+                                    <div class="form-grid form-grid--inline">
+                                        <label>Timeframe*
+                                            <input type="text" class="experience-time" required placeholder="e.g., Jun 2023 - Aug 2023">
+                                        </label>
+                                        <label>Location*
+                                            <input type="text" class="experience-location" required>
+                                        </label>
+                                    </div>
+                                    <label>Key contributions*
+                                        <textarea class="experience-details" rows="4" required placeholder="Use separate lines for bullet points."></textarea>
+                                    </label>
+                                    <button type="button" class="repeatable__remove" aria-label="Remove experience entry">Remove entry</button>
+                                </div>
+                            </div>
+                            <button type="button" class="repeatable__add" data-target="experience">Add another experience</button>
+                            <template id="experience-template">
+                                <div class="repeatable__item" data-entry>
+                                    <label>Role or Title*
+                                        <input type="text" class="experience-role" required>
+                                    </label>
+                                    <label>Organization*
+                                        <input type="text" class="experience-org" required>
+                                    </label>
+                                    <div class="form-grid form-grid--inline">
+                                        <label>Timeframe*
+                                            <input type="text" class="experience-time" required placeholder="e.g., Jan 2024 - Present">
+                                        </label>
+                                        <label>Location*
+                                            <input type="text" class="experience-location" required>
+                                        </label>
+                                    </div>
+                                    <label>Key contributions*
+                                        <textarea class="experience-details" rows="4" required placeholder="Use separate lines for bullet points."></textarea>
+                                    </label>
+                                    <button type="button" class="repeatable__remove" aria-label="Remove experience entry">Remove entry</button>
+                                </div>
+                            </template>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Education</legend>
+                            <div class="repeatable" data-repeatable="education">
+                                <div class="repeatable__item" data-entry>
+                                    <label>Degree / Program*
+                                        <input type="text" class="education-degree" required>
+                                    </label>
+                                    <label>Institution*
+                                        <input type="text" class="education-school" required>
+                                    </label>
+                                    <label>Years or status*
+                                        <input type="text" class="education-years" required placeholder="2021 - Present">
+                                    </label>
+                                    <label>Highlights
+                                        <textarea class="education-highlights" rows="2" placeholder="Thesis topic, honors, etc."></textarea>
+                                    </label>
+                                    <button type="button" class="repeatable__remove" aria-label="Remove education entry">Remove entry</button>
+                                </div>
+                            </div>
+                            <button type="button" class="repeatable__add" data-target="education">Add another education entry</button>
+                            <template id="education-template">
+                                <div class="repeatable__item" data-entry>
+                                    <label>Degree / Program*
+                                        <input type="text" class="education-degree" required>
+                                    </label>
+                                    <label>Institution*
+                                        <input type="text" class="education-school" required>
+                                    </label>
+                                    <label>Years or status*
+                                        <input type="text" class="education-years" required placeholder="2019 - 2023">
+                                    </label>
+                                    <label>Highlights
+                                        <textarea class="education-highlights" rows="2" placeholder="Optional notes"></textarea>
+                                    </label>
+                                    <button type="button" class="repeatable__remove" aria-label="Remove education entry">Remove entry</button>
+                                </div>
+                            </template>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Skills & Strengths</legend>
+                            <div class="form-grid">
+                                <label for="programming-skills">Programming &amp; Tools (comma-separated)</label>
+                                <input type="text" id="programming-skills" name="programming-skills" placeholder="Java, MATLAB, Python">
+
+                                <label for="engineering-skills">Engineering Software</label>
+                                <input type="text" id="engineering-skills" name="engineering-skills" placeholder="OrCAD, NI Multisim">
+
+                                <label for="focus-areas">Concepts &amp; Focus Areas</label>
+                                <input type="text" id="focus-areas" name="focus-areas" placeholder="Wireless Systems, Microprocessors">
+
+                                <label for="languages">Languages</label>
+                                <input type="text" id="languages" name="languages" placeholder="Arabic - Fluent, English - Fluent">
+
+                                <label for="productivity">Productivity &amp; Collaboration</label>
+                                <input type="text" id="productivity" name="productivity" placeholder="Microsoft Office, Notion">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Projects / Certifications (optional)</legend>
+                            <label for="projects">List each item on a new line</label>
+                            <textarea id="projects" name="projects" rows="3" placeholder="DELF B2 Certificate"></textarea>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="primary-btn">Render CV Preview</button>
+                            <button type="reset" class="secondary-btn">Reset form</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="cv-entry__preview">
+                    <h3>Live CV Preview</h3>
+                    <p class="helper-text">The preview updates automatically when you type or resubmit the form.</p>
+                    <div id="cv-preview" class="cv-preview" role="region" aria-live="polite"></div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>Last updated: 2025-10-06</p>
+        </footer>
+        <script src="../js/cv.js" defer></script>
+    </body>
+</html>
